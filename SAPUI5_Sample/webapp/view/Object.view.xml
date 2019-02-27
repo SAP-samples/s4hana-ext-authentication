@@ -1,0 +1,51 @@
+<mvc:View controllerName="ba.authenticationUI.controller.Object" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form"
+	xmlns:semantic="sap.f.semantic" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false" busy="{objectView>/busy}"
+		busyIndicatorDelay="{objectView>/delay}">
+		<semantic:titleBreadcrumbs>
+			<l:VerticalLayout width="100%">
+				<l:content>
+					<Breadcrumbs currentLocationText="Details">
+						<Link press="onNavBack" text="Products"/>
+					</Breadcrumbs>
+				</l:content>
+			</l:VerticalLayout>
+		</semantic:titleBreadcrumbs>
+		<semantic:titleHeading>
+			<Title text="{Product}"/>
+		</semantic:titleHeading>
+		<semantic:titleExpandedContent>
+			<Text text="{ProductDescription}"/>
+		</semantic:titleExpandedContent>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+		<semantic:content>
+			<Title text="{Product}"/>
+			<Panel class="sapUiNoContentPadding" headerText="Product Info">
+				<content>
+					<form:SimpleForm id="SimpleFormDisplay480_12120Dual" editable="false" layout="ResponsiveGridLayout" labelSpanXL="5" labelSpanL="5"
+						labelSpanM="12" labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+						columnsL="2" columnsM="2" singleContainerFullSize="false">
+						<form:content>
+							<core:Title text="Product Details"/>
+							<Label text="Product Type"/>
+							<Text text="{ProductType}"/>
+							<Label text="Product Group"/>
+							<Text text="{ProductGroup}"/>
+							<core:Title text="Packaging Details"/>
+							<Label text="Maximum Packaging Length"/>
+							<Text text="{MaximumPackagingLength}"/>
+							<Label text="Maximum Packaging Width"/>
+							<Text text="{MaximumPackagingWidth}"/>
+							<Label text="Maximum Packaging Height"/>
+							<Text text="{MaximumPackagingHeight}"/>
+							<Label text="Material Volume"/>
+							<Text text="{MaterialVolume}"/>
+						</form:content>
+					</form:SimpleForm>
+				</content>
+			</Panel>
+		</semantic:content>
+	</semantic:SemanticPage>
+</mvc:View>
