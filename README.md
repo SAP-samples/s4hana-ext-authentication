@@ -1,4 +1,4 @@
-# SAP S/4HANA Cloud Extensions - Set Up Authentication for SAP S/4HANA Cloud Extensions
+# Tutorial: Set Up Authentication for SAP S/4HANA Cloud Extensions
 This repository contains the sample code for the [Set Up Authentication for SAP S/4HANA Cloud Extensions tutorial](http://tiny.cc/s4-ext-authentication).
 
 *This code is only one part of the tutorial, so please follow the tutorial before attempting to use this code.*
@@ -17,7 +17,8 @@ Requirements
 -------------
 - An account in SAP Cloud Platform with a subaccount in the Neo environment and an SAP Cloud Platform Java server of any size.
 - An SAP S/4HANA Cloud tenant. **This is a commercial paid product.**
-- [Java SE 8 Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/index.html) and [Apache Maven](http://maven.apache.org/download.cgi) to build the application.
+- [Java SE 8 Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/index.html) to compile the Java application.
+- [Apache Maven](http://maven.apache.org/download.cgi) to build the Java application.
 
 Download and Installation
 -------------
