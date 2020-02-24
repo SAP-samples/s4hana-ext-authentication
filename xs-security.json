@@ -1,0 +1,19 @@
+{
+  "xsappname": "xsuaa",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Viewer",
+      "description": "Viewer"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "Required to see the product list from S/4HANA Cloud in our application",
+      "scope-references"     : [
+        "$XSAPPNAME.Viewer", "uaa.user" 
+      ]
+    }
+  ]
+}

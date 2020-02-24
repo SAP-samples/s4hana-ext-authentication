@@ -1,0 +1,35 @@
+---
+applications:
+
+- name: backend
+  memory: 1.5G
+  instances: 1
+  routes:
+  # TODO replace a placeholder with the value of your choice
+  - route: <backend-service-url>
+  path: application/target/authentication-application.war
+  buildpacks:
+    - sap_java_buildpack
+  env:
+    TARGET_RUNTIME: tomee7
+    SAP_JWT_TRUST_ACL: '[{"clientid" : "*", "identityzone" : "*"}]'
+    SET_LOGGING_LEVEL: '{ROOT: INFO, com.sap.cloud.sdk: INFO}'
+    JBP_CONFIG_SAPJVM_MEMORY_SIZES: 'metaspace:128m..'
+  services:
+  # TODO replace placeholders with the existing service instances names
+  - <xsuaa-service-instance>
+  - <destination-service-instance>
+ 
+- name: approuter
+  routes:
+  # TODO replace a placeholder with the value of your choice
+  - route: <main-url>
+  memory: 128M  
+  path: approuter  
+  buildpack: nodejs_buildpack
+  # TODO replace placeholders with the previously chosen routes
+  env:
+    destinations: '[{"name":"backend", "url" :"https://<backend-service-url>", "forwardAuthToken": true}]'
+  services:
+  # TODO replace placeholder with the name of the same instance that is used by the backend application
+  - <xsuaa-service-instance>

@@ -5,57 +5,23 @@
          version="3.0" metadata-complete="false">
 
     <login-config>
-        <auth-method>FORM</auth-method>
-    </login-config>
-
-    <session-config>
-        <session-timeout>20</session-timeout>
-    </session-config>
-
-    <security-role>
-        <role-name>Everyone</role-name>
+		<!-- Cloud Foundry specific authentication method -->
+		<auth-method>XSUAA</auth-method>
+	</login-config>
+	
+	<security-role>
+        <description>Allowed to view the data</description>
+        <role-name>Viewer</role-name>
     </security-role>
-
-    <security-constraint>
+    
+	<security-constraint>
         <web-resource-collection>
-            <web-resource-name>All SAP Cloud Platform users</web-resource-name>
+            <web-resource-name>Entire website</web-resource-name>
             <url-pattern>/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>Everyone</role-name>
+            <role-name>Viewer</role-name>
         </auth-constraint>
-
-        <user-data-constraint>
-            <transport-guarantee>NONE</transport-guarantee>
-            <!-- Use CONFIDENTIAL as transport guarantee to ensure SSL connection (HTTPS) on public deployments
-            <transport-guarantee>CONFIDENTIAL</transport-guarantee> -->
-        </user-data-constraint>
     </security-constraint>
-
-<!--     <filter> -->
-<!--         <filter-name>RestCsrfPreventionFilter</filter-name> -->
-<!--         <filter-class>org.apache.catalina.filters.RestCsrfPreventionFilter</filter-class> -->
-<!--     </filter> -->
-<!--     <filter-mapping> -->
-<!--         <filter-name>RestCsrfPreventionFilter</filter-name> -->
-<!--         <url-pattern>/*</url-pattern> -->
-<!--     </filter-mapping> -->
-
-    <filter>
-        <filter-name>HttpSecurityHeadersFilter</filter-name>
-        <filter-class>com.sap.cloud.sdk.cloudplatform.security.servlet.HttpSecurityHeadersFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>HttpSecurityHeadersFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
-
-    <filter>
-        <filter-name>HttpCachingHeaderFilter</filter-name>
-        <filter-class>com.sap.cloud.sdk.cloudplatform.security.servlet.HttpCachingHeaderFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>HttpCachingHeaderFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    
 </web-app>
