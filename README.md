@@ -1,3 +1,4 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/s4hana-ext-authentication)](https://api.reuse.software/info/github.com/SAP-samples/s4hana-ext-authentication)
 # Tutorial: Set Up Authentication for SAP S/4HANA Cloud Extensions
 This repository contains the sample code for the [Set Up Authentication for SAP S/4HANA Cloud Extensions tutorial](http://tiny.cc/s4-ext-authentication).
 
