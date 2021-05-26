@@ -12,7 +12,7 @@ Licensed under SAP DEVELOPER LICENSE AGREEMENT
 SAP S/4HANA - Test Utilities (com.sap.cloud.s4hana:testutil:2.22.0 - https://www.sap.com/s4sdk)
 Licensed under SAP DEVELOPER LICENSE AGREEMENT
 
-Cloud Platform - SAP CP Cloud Foundry (com.sap.cloud.s4hana.cloudplatform:scp-cf:2.22.0 - https://www.sap.com/s4sdk)
+Business Technology Platform (BTP) - SAP BTP Cloud Foundry (com.sap.cloud.s4hana.cloudplatform:scp-cf:2.22.0 - https://www.sap.com/s4sdk)
 Licensed under SAP DEVELOPER LICENSE AGREEMENT
 
 REST Assured (io.rest-assured:rest-assured:3.2.0 - http://code.google.com/p/rest-assured)
