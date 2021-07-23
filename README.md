@@ -6,7 +6,7 @@ This repository contains the sample code for the [Set Up Authentication for SAP 
 
 ## Description
 
-The [Set Up Authentication for SAP S/4HANA Cloud Extensions tutorial](http://tiny.cc/s4-ext-authentication) showcases how you can configure the connectivity from your SAP Cloud Platform Cloud Foundry account to your SAP S/4HANA Cloud tenant when setting up side-by-side extensibility applications. Simple Java and SAPUI5 applications are used as an example that you can implement in your own landscape to check how you can use these different authentication types.
+The [Set Up Authentication for SAP S/4HANA Cloud Extensions tutorial](http://tiny.cc/s4-ext-authentication) showcases how you can configure the connectivity from your SAP Business Technology Platform (BTP) Cloud Foundry account to your SAP S/4HANA Cloud tenant when setting up side-by-side extensibility applications. Simple Java and SAPUI5 applications are used as an example that you can implement in your own landscape to check how you can use these different authentication types.
 
 #### SAP Extensibility Explorer
 
@@ -16,7 +16,7 @@ SAP Extensibility Explorer is a central place where anyone involved in the exten
 
 Requirements
 -------------
-- An account in SAP Cloud Platform with a subaccount in the Cloud Foundry environment and Destination and Authorization & Trust Management services enabled.
+- An account in SAP Business Technology Platform (BTP) with a subaccount in the Cloud Foundry environment and Destination and Authorization & Trust Management services enabled.
 - An SAP S/4HANA Cloud tenant. **This is a commercial paid product.**
 - [Java SE 8 Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/index.html) to compile the Java application.
 - [Apache Maven](http://maven.apache.org/download.cgi) to build the Java application.
